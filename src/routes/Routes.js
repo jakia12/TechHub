@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
+import Home from "../pages/home/Home";
 import Notfound from "../pages/notfound/Notfound";
 import Portfolio from "../pages/portfolio/Portfolio";
 import Services from "../pages/services/Services";

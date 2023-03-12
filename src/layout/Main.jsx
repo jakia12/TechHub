@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
+import profilePic from "../images/profile.jpg";
 import "./Main.css";
 
 const Main = () => {
@@ -11,6 +12,16 @@ const Main = () => {
     isOpen === true ? setIsOpen(false) : setIsOpen(true);
   };
 
+  //nav menu active style
+  let activeStyle = {
+    // backgroundColor: "#",
+    color: "#3F83F8",
+    // paddingRight: 11,
+    // paddingLeft: 11,
+    // paddingTop: 7,
+    // paddingBottom: 7,
+  };
+
   return (
     <>
       <section className="">
@@ -19,79 +30,98 @@ const Main = () => {
             <div className="w-1/5 lg:block hidden">
               <div
                 id="drawer-navigation"
-                className="drawer_height w-1/5  z-40 fixed left-0 top-0 p-4 overflow-y-auto h-full bg-[#111418] dark:bg-gray-800"
+                className="drawer_height w-1/5  z-40 fixed left-0 top-0 p-4 h-full bg-[#111418] dark:bg-gray-800"
                 tabindex="-1"
                 aria-labelledby="drawer-navigation-label"
               >
-                <div className="py-4 ">
-                  <Link to="/" className="flex items-center justify-center">
-                    <span className="text-center text-2xl font-medium whitespace-nowrap text-white py-4">
-                      TechHub
-                    </span>
-                  </Link>
+                <div className="py-2 ">
+                  {/* <span className="text-center text-2xl font-medium whitespace-nowrap text-white py-4">
+                      Jessica Doe
+                    </span> */}
 
                   <div className="flex items-center justify-center">
-                    <div className="py-3 text-center">
-                      <img
-                        src={""}
-                        className="rounded-full max-w-30 max-h-30 user_image"
-                        alt="User Photo"
-                      />
-                      <h4 className="text-lg mt-5 mb-2 text-medium text-white">
-                        {user?.displayName}
-                      </h4>
-                    </div>
+                    <Link to="/" className="flex items-center justify-center">
+                      <div className="py-3 text-center">
+                        <img
+                          src={profilePic}
+                          className="rounded-full max-w-30 max-h-30 user_image border-8 border-[#343a40]
+                          "
+                          alt="User Photo"
+                        />
+                        <h4 className="text-lg mt-5  text-medium text-white">
+                          Jhon Doe
+                        </h4>
+                      </div>
+                    </Link>
                   </div>
 
-                  <hr className="divider_line my-3" />
-                  <ul className="space-y-2">
+                  <hr className="divider_line my-2" />
+                  <ul className="space-y-2 flex flex-col items-center justify-center">
                     <li>
-                      <Link
+                      <NavLink
                         to="/"
                         className="flex items-center p-2 text-base font-normal  rounded-lg dark:text-white dark:hover:bg-gray-700 text-gray-100"
+                        style={({ isActive }) =>
+                          isActive ? activeStyle : undefined
+                        }
                       >
                         <span className="ml-3">Home</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
+                      <NavLink
                         to="/about"
                         className="flex items-center p-2 text-base font-normal  rounded-lg dark:text-white dark:hover:bg-gray-700 text-gray-100"
+                        style={({ isActive }) =>
+                          isActive ? activeStyle : undefined
+                        }
                       >
                         <span className="ml-3">About</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
+                      <NavLink
                         to="/services"
                         className="flex items-center p-2 text-base font-normal  rounded-lg dark:text-white dark:hover:bg-gray-700 text-gray-100"
+                        style={({ isActive }) =>
+                          isActive ? activeStyle : undefined
+                        }
                       >
                         <span className="ml-3">Services</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
+                      <NavLink
                         to="/portfolios"
                         className="flex items-center p-2 text-base font-normal  rounded-lg dark:text-white dark:hover:bg-gray-700 text-gray-100"
+                        style={({ isActive }) =>
+                          isActive ? activeStyle : undefined
+                        }
                       >
                         <span className="ml-3">Portfolios</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
+                      <NavLink
                         to="/testimonials"
                         className="flex items-center p-2 text-base font-normal  rounded-lg dark:text-white dark:hover:bg-gray-700 text-gray-100"
+                        style={({ isActive }) =>
+                          isActive ? activeStyle : undefined
+                        }
                       >
                         <span className="ml-3">Testimonials</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
+                      <NavLink
                         to="/contact"
                         className="flex items-center p-2 text-base font-normal  rounded-lg dark:text-white dark:hover:bg-gray-700 text-gray-100"
+                        style={({ isActive }) =>
+                          isActive ? activeStyle : undefined
+                        }
                       >
                         <span className="ml-3">Contact</span>
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </div>
