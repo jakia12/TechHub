@@ -35,7 +35,7 @@ const About = () => {
                 industry that provide the best software development and website
                 application development service.
               </p>
-              <div className="py-4 text-left">
+              <div className="pb-2 pt-3 text-left">
                 <div className="flex items-center">
                   {icons.map((icon) => (
                     <div

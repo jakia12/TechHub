@@ -4,7 +4,7 @@ import { services } from "../../PlaceholderData/Placeholder";
 
 const Services = () => {
   return (
-    <section className="services_section bg-gray-50 py-14 lg:py-20">
+    <section className="services_section bg-gray-50 py-10 lg:py-20">
       <div className="container mx-auto w-full lg:max-w-6xl px-4 lg:px-6">
         <div className="text-center relative">
           <h2 className="text-4xl font-semibold text-dark pt-1 pb-3">
@@ -13,7 +13,7 @@ const Services = () => {
           <div className="bg-lightBlue w-24 h-1  m-0 mx-auto mb-10"></div>
         </div>
 
-        <div className="md:flex items-center flex-wrap">
+        <div className="md:flex items-center flex-wrap justify-center md:justify-self-auto">
           {services.map((service) => (
             <SingleCard key={service.id} service={service} />
           ))}

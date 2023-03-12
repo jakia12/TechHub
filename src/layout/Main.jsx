@@ -49,7 +49,7 @@ const Main = () => {
                           alt="User Photo"
                         />
                         <h4 className="text-lg mt-5  text-medium text-white">
-                          Jhon Doe
+                          Jessica Doe
                         </h4>
                       </div>
                     </Link>
@@ -130,12 +130,41 @@ const Main = () => {
             {/* dashboard main part */}
             <div className="w-full lg:w-4/5">
               <div>
+                <div className="bg-[#000] md:hidden block py-6 px-3 relative">
+                  <div className="flex items-center justify-between px-6">
+                    <Link to="/">
+                      <span className="text-2xl italic text-semibold text-white">
+                        Jessica Doe
+                      </span>
+                    </Link>
+                    <span
+                      className=" text-white  mx-3 md:hidden cursor-pointer"
+                      title="Open sidenav"
+                      onClick={handleToggle}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-8 h-8"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
                 <Outlet />
                 {/* sidenav for mobile screen */}
                 <div className="">
                   <div
                     id="drawer-navigation"
-                    className={`side_nav block lg:hidden z-40 h-screen p-4  bg-white w-80 dark:bg-gray-800 ${
+                    className={`side_nav block lg:hidden z-40 h-screen p-4  bg-[#111] w-80 dark:bg-gray-800 ${
                       isOpen === true ? "activ" : ""
                     }`}
                     tabindex="-1"
@@ -165,16 +194,15 @@ const Main = () => {
                       </svg>
                       <span className="sr-only">Close menu</span>
                     </button>
-                    <div className="py-4 overflow-y-auto px-7">
-                      <Link to="/" className="flex items-center justify-center">
+                    <div className="py-14 overflow-y-auto px-7">
+                      {/* <Link to="/" className="flex items-center justify-center">
                         <span className="text-center text-2xl font-medium whitespace-nowrap text-white py-4">
                           TechHub
                         </span>
-                      </Link>
+                      </Link> */}
 
-                      <hr className="divider_line my-3" />
                       {/* mobile menu */}
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 flex flex-col items-center justify-center">
                         <li>
                           <a
                             href="/"
