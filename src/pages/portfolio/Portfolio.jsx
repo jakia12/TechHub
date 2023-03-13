@@ -15,7 +15,7 @@ const Portfolio = () => {
         <div className="md:flex items-center justify-center flex-wrap">
           {portfolios.map((portfolio) => (
             <div className="w-full lg:w-4/12  mx-auto sm:mx-0">
-              <div className=" m-3.5 content">
+              <div className=" m-4 content">
                 <div className="content_overlay"></div>
                 <img
                   src={portfolio.img}

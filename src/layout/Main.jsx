@@ -48,7 +48,7 @@ const Main = () => {
                           "
                           alt="User Photo"
                         />
-                        <h4 className="text-lg mt-5  text-medium text-white">
+                        <h4 className="text-xl mt-5  text-semibold text-white">
                           Jessica Doe
                         </h4>
                       </div>
